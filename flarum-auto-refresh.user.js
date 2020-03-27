@@ -3,7 +3,7 @@
 // @description    Automatically refreshes the H&S discussion list every 20 seconds
 // @author         David Wheatley <davidwheatley03@gmail.com> (https://github.com/davwheat/giffgaff-flarum-auto-refresh)
 // @namespace      https://github.com/davwheat/giffgaff-flarum-auto-refresh
-// @version        1.0.2
+// @version        1.1.0
 // @icon           https://github.com/davwheat/giffgaff-flarum-auto-refresh/blob/master/icon.png?raw=true
 // @match          *://community.giffgaff.com/*
 // @grant          none
@@ -13,6 +13,7 @@
 setInterval(() => {
     if (window.location.pathname !== "/t/help-and-support") {
         console.info("Not refreshing discussion list: not on H&S tag page.")
+        return
     }
     
     $("main.App-content  div.IndexPage-toolbar li.item-refresh > button").click()
