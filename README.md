@@ -12,3 +12,4 @@ This TamperMonkey user script auto-refreshes the Help & Support discussion list 
 ## Also see
 
 * [Better Flarum Dates](https://github.com/davwheat/giffgaff-flarum-better-post-dates#readme)
+* [Flarum Infinite Scrolling](https://github.com/davwheat/giffgaff-flarum-infinite-scroll#readme)
