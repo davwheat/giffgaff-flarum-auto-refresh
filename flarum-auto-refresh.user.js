@@ -3,7 +3,7 @@
 // @description    Automatically refreshes the H&S discussion list every 20 seconds
 // @author         David Wheatley <davidwheatley03@gmail.com> (https://github.com/davwheat/giffgaff-flarum-auto-refresh)
 // @namespace      https://github.com/davwheat/giffgaff-flarum-auto-refresh
-// @version        1.2.0
+// @version        1.2.1
 // @icon           https://github.com/davwheat/giffgaff-flarum-auto-refresh/blob/master/icon.png?raw=true
 // @match          *://community.giffgaff.com/*
 // @grant          none
@@ -20,8 +20,8 @@ const enabledPaths = [
 ];
 
 setInterval(() => {
-    if (enabledPaths.includes(window.location.pathname)) {
-        console.info("Not refreshing discussion list. Page not on the enables paths list.", enabledPaths)
+    if (!enabledPaths.includes(window.location.pathname)) {
+        console.info("Not refreshing discussion list. Page not on list of enabled paths.", enabledPaths)
         return
     }
     
