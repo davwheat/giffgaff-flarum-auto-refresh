@@ -21,7 +21,7 @@ const enabledPaths = [
 
 setInterval(() => {
     if (!enabledPaths.includes(window.location.pathname)) {
-        console.info("Not refreshing discussion list. Page not on list of enabled paths.", enabledPaths)
+        console.log("Not refreshing discussion list. Page not on list of enabled paths.")
         return
     }
     
